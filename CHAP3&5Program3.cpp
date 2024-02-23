@@ -2,10 +2,17 @@
 //
 
 #include <iostream>
+#include <fstream>
+
+std::fstream inFile("File1.txt");
+std::fstream inFile2("File2.txt");
+std::fstream outFile("File3.txt");
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    if (!inFile.is_open()) {
+        std::cout << "!";
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
